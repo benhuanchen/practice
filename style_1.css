@@ -1,0 +1,23 @@
+#container{
+    margin: 0 auto;
+    width: 960px;
+}
+
+span,h3{
+    font-size:  16px;
+}
+
+p{
+    font-size: 16px;
+    line-height: 0.2rem;
+}
+
+#nengli_one,
+#nengli_two,
+#education_one,
+#education_two,
+#demo_one,
+#demo_two {
+    padding-bottom: 7px;
+}
+

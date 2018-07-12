@@ -1,0 +1,42 @@
+#header {
+    float: left;
+    text-align: center;
+    color: aliceblue;
+    background-color: cornflowerblue;
+    height: 750px;
+    width: 200px;
+    padding-top: 50px;
+}
+
+#content {
+    padding-left: 220px;
+    padding-top: 20px;
+
+}
+#container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+span,
+h3 {
+    font-size:  16px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 0.2rem;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+#nengli_one,
+#nengli_two,
+#education_one,
+#education_two,
+#demo_one,
+#demo_two {
+    padding-bottom: 7px;
+}
