@@ -1,0 +1,148 @@
+#header {
+    width: 100%;
+    background-color: black;
+    height: 50px;
+}
+
+#header_mid {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#logo {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 50px;
+    display: inline;
+}
+
+#right_nav {
+    float: right;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+#right_nav a{
+    color: #ffffff;
+}
+
+#banner {
+    width: 100%;
+    height: 250px;
+    background-color: lightskyblue;
+    position: relative;
+}
+
+#num {
+    position: absolute;
+    right: 160px;
+    top: 180px;
+    width: 100px;
+    height: 55px;
+ 
+}
+
+.num_nav {
+    display: inline;
+    border: 1px solid #eeeeee;
+}
+
+#num ul {
+    padding:0;
+    margin-bottom: 0;
+    list-style-type: none;
+   
+}
+#num ul li {
+    display: inline-block;
+    color: #d67474;
+    border: 1px solid #eeeeee;
+    width: 15px;
+    height: 25px;
+    background-color: skyblue;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#num ul li:hover {
+    cursor: pointer;
+    height: 35px;
+}
+
+#main_nav {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #dbd3d3;
+}
+
+#menu {
+    width: 960px;
+    height: 50px;
+    margin: auto;
+}
+
+
+#menu ul {
+    list-style-type:none;
+    margin:0;
+    padding-top:10px;
+    padding-left: 0;
+    overflow:hidden;
+}
+
+#menu ul li{
+    float:left;
+    width: 80px;
+    text-align: center;
+    font-size: 15px;
+    height: 40px;
+    background-color: #dbd3d3;
+    line-height: 40px;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+}
+
+#menu ul li:hover{ 
+    cursor: pointer;
+    background-color:#ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+#content {
+    width: 960px;
+    height: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.box1 {
+   box-sizing: border-box;
+    height: 150px;
+    border: 1px solid #dbd3d3;
+    line-height: 150px;
+    min-width: 300px;
+    margin-right: 10px; 
+    text-align: center;
+}
+
+.box2 {
+    min-width: 220px;
+    height: 150px;
+    border: 1px solid #dbd3d3;
+    margin-right: 10px;
+    line-height: 150px;
+    text-align: center;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #cccccc;
+    text-align: center;
+    line-height: 50px;
+}
