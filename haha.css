@@ -1,0 +1,453 @@
+#body {
+    margin: 0 auto;
+}
+
+#header {
+    background: url(images/header.png);
+    height: 990px;
+    width: 1600px;
+}
+
+#title {
+    padding-top: 210px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 26px;
+}
+
+#content {
+   margin: auto;
+   text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 767px;
+    height: 169px;
+    padding-top: 50px;
+}
+
+#login {
+    width: 970px;
+    height: 247px;
+    margin: auto;
+    border: 1px solid lightgray;
+}
+
+
+#line_1 {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    padding-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#line_2 {
+    font-size: 12px;
+    text-align: center;
+    color: lightgray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+}
+
+
+#input_1 {
+    height: 48px;
+    width: 286px;
+    margin-left: 91px;
+    margin-top: 60px;
+    border: 1px solid lightgray;
+    float: left;
+    line-height: 48px;
+    color: white;
+}
+
+
+#input_2 {
+    height: 48px;
+    width: 286px;
+    margin-left: 431px;
+    margin-top: -50px;
+    border: 1px solid lightgray;
+    float: left;
+    line-height: 48px;
+    color: lightgray;
+}
+
+#button {
+    width: 125px;
+    height: 48px;
+    background-color: white;
+    line-height: 48px;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 740px;
+    text-align: center;
+}
+
+#item_1 {
+    background-color: white;
+    width: 1600px;
+    height: 710px;
+}
+
+#title_1 {
+    padding-top: 90px;
+    text-align: center;
+}
+
+#title_2 {
+    padding-top: 60px;
+    text-align: center;
+}
+
+#features {
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 66px;
+}
+
+.features_1 {
+   flex: 1;
+}
+
+.icon {
+    height: 49px;
+    float: left;
+}
+
+.icon_title {
+    padding-left: 55px;
+    height: 20px;
+}
+
+.icon_text {
+    padding-left: 55px;
+    padding-top: 26px;
+}
+
+#item_2 {
+    background: url(images/图层-2.png);
+    height: 800px;
+    width: 1350px;
+    padding-left: 250px;
+}
+
+#left {
+    width: 515px;
+    height: 450px;  
+    float: left;
+    
+}
+
+#left_title {
+    width: 450px;
+    height: 57px;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    padding-top: 184px;
+}
+
+#left_text {
+    height: 136px;
+    width: 369px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: lightgray;
+    padding-top: 184px;
+}
+
+#button1 {
+    width: 220px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    float: left;
+}
+
+#button2 {
+    width: 220px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    margin-left: 250px;
+    color: white;
+    border: 1px solid lightgray;
+}
+
+#right {
+    float: right;
+    height: 600px;
+    width: 645px;
+    margin-top:105px;
+    border: 1px solid lightgray;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+  
+}
+
+#photo {
+    padding-left: 63px;
+    padding-top: 34px;
+}
+
+#item_3 {
+    width: 1600px;
+    height: 580px;
+    border-bottom: 1px solid lightgray;
+}
+
+#title_3 {
+    padding-top: 100px;
+    text-align: center;
+}
+
+#content_3 {
+    width: 970px;
+    height: 318px;
+    margin: auto;
+    display: flex;
+}
+
+.content3_1 {
+    flex: 1;
+    margin-top: 90px;
+}
+
+.content3_title {
+    text-align: center;
+}
+
+.content3_text {
+    margin-top: 43px;
+    text-align: center;
+}
+
+#item_4 {
+    width: 1600px;
+    height: 1000px;
+    border-bottom: 1px solid lightgray;
+}
+
+#camera {
+    width: 975px;
+    height: 790px;
+    margin: auto;
+    margin-top: 118px;
+}
+
+#leaf_left img {
+    width: 570px;
+    height: 350px;
+    float: left;
+}
+
+#leaf_right {
+    float: right;
+    margin-top: 35px;
+}
+
+#leaf_text {
+    margin-top: 40px;
+}
+
+#bird_left img {
+    width: 570px;
+    height: 346px;
+    float:  right;
+    margin-top: 80px;
+}
+
+#bird_right {
+    float: left;
+    margin-top: 150px;
+}
+
+#bird_text {
+    margin-top: 50px;
+}
+
+#item_5 {
+    height: 1084px;
+    width: 1600px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+
+#header_5{
+    margin-top: 95px;
+    text-align: center;
+}
+
+#ii_2 {
+    margin-top: 35px;
+}
+
+#selfi {
+    width: 970px;
+    height: 780px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 67px;
+}
+
+
+.self {
+    flex: 1;
+}
+
+.self img {
+    width: 470px;
+    height: 370px;
+}
+
+#item_6 {
+    height: 700px;
+    width: 1600px;
+}
+
+#form {
+    height: 560px;
+    width: 460px;
+    border: 1px solid lightgray;
+    float: left;
+}
+
+#content_6 {
+    height: 500px;
+    width: 1020px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+#form_title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#form_text {
+    width: 375px;
+    height: 305px;
+    margin: auto;
+    margin-top: 50px;
+}
+#E_mail {
+    width: 370px;
+    height: 50px;
+    border: 1px solid lightgray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 50px;
+    color: lightgray;
+}
+
+#Subject {
+    width: 370px;
+    height: 50px;
+    border: 1px solid lightgray;
+    margin-top: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 50px;
+    color: lightgray;
+}
+
+#message {
+    width: 370px;
+    height: 145px;
+    border: 1px solid lightgray;
+    margin-top: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 50px;
+    color: lightgray;
+}
+
+#form_button {
+    width: 370px;
+    height: 50px;
+    background-color: black;
+    color:white;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+#contact {
+    height: 400px;
+    width: 280px;
+    float: right;
+    margin-top: 80px;
+    left: 600px;
+}
+
+#contact_icon {
+    height: 210px;
+    margin-top: 145px;
+    position: relative;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icons_text {
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+.icon_detail {
+    display: flex;
+    margin-top: 30px;
+}
+
+#la img {
+   
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    left: 80px;
+}
+
+#footer {
+    height: 410px;
+    width: 1600px;
+    background-color: black;
+    display: flex;
+   
+}
+
+.footer_content {
+    height: 220px;
+    height: 135px;
+    margin-top: 80px;
+    
+    margin-left: 5%;
+    width: 20%;
+}
+
+.footer_menu {
+    margin-top: 35px;
+}
+
+#footer_icon {
+    width: 260px;
+    height: 35px;
+    margin-top: 25px;
+
+}
+
+#footer_icon img {
+    margin-right: 20px;
+}
