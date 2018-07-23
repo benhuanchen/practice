@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #slideShow {
+                width: 480px;
+                height: 480px;
+                position: relative;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="slideShow">
+            <img src="Erik.jpg" id="cool">
+        </div>
+        <script>
+            window.onload = function(){ 
+                var preview = document.getElementById("cool");
+                var y = 0;
+                preview.style.position = "absolute";
+                function slide(){
+                    if (y<8160)
+                        y += 480;
+                    preview.style.top = "-" + y + "px";
+                }
+            setInterval(slide,100); 
+        }
+        </script>
+        
+    </body>
+</html>
