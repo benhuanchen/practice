@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head><meta charset="utf-8"></head>
+    <body>
+        <script>
+            var myDate = new Date();
+            var myYear = myDate.getFullYear();
+            var myMonth = myDate.getMonth();
+            var myDay = myDate.getDate();
+            var myHour = myDate.getHours();
+            var myMinute = myDate.getMinutes();
+            var mySecond = myDate.getSeconds();
+            
+            function checkTime() {
+                if (myMonth < 10)
+                    myMonth ="0" + myMonth;
+                if (myDay < 10)
+                    myDay = "0" + myDay;
+                if (myHour < 10)
+                    myHour = "0" + myHour;
+                if (myMinute < 10)
+                    myMinute = "0" + myMinute;
+                if (mySecond < 10)
+                    mySecond = "0" + mySecond;
+            }
+        
+            function weekDay() {
+                var weekday=new Array(7)
+                weekday[0]="星期日";
+                weekday[1]="星期一";
+                weekday[2]="星期二";
+                weekday[3]="星期三";
+                weekday[4]="星期四";
+                weekday[5]="星期五";
+                weekday[6]="星期六"; 
+                
+                return weekday[myDate.getDay()];
+            }
+
+
+
+            function date() {
+                document.write(myYear+ "年" + myMonth+ "月" +myDay+ "日");    
+                document.write(weekDay());   
+                document.write(myHour+ ":" + myMinute+ ":" +mySecond); 
+            }
+            checkTime();
+            date();
+        </script>
+    </body>
+</html>

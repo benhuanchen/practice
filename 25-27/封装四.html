@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head><meta charset="utf-8"></head>
+    <body>
+            <select id="year-select">
+                    <option value="2000">2000</option>                   
+                </select>
+                
+                <select id="month-select">
+                    <option value="1">1</option>
+                </select>
+                
+                <select id="day-select">
+                    <option value="1">1</option>
+                </select>
+                
+                <select id="hour-select">
+                    <option value="0">00</option>
+                </select>
+                
+                <select id="minute-select">
+                    <option value="00">00</option>
+                </select>
+                
+                <select id="second-select">
+                    <option value="00">00</option>
+                </select>
+                
+                <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+
+                <script>
+                    function createDate() {
+                        for (var i = 2001; i <= 2018; i++){
+                            var option = document.createElement("option");
+                            var text = document.createTextNode(i);
+                            option.appendChild(text);
+                            document.getElementById("year-select").appendChild(option);
+                        }
+
+                        for (var i = 2; i <= 12; i++){
+                            var option = document.createElement("option");
+                            var text = document.createTextNode(i);
+                            option.appendChild(text);
+                            document.getElementById("month-select").appendChild(option);
+                        }
+                    }
+
+                        for (var i = 2; i <= 31; i++){
+                            var option = document.createElement("option");
+                            var text = document.createTextNode(i);
+                            option.appendChild(text);
+                            document.getElementById("day-select").appendChild(option);
+                        }
+
+                    document.getElementById("year-select").onclick = function() {
+                        show();
+                        document.getElementById("month-select").options[0].selected = true;
+                        document.getElementById("day-select").options[0].selected = true;
+                    }
+
+                    document.getElementById("month-select").onclick = function() {
+                        show();
+                        var days;
+                        var sel = Number(document.getElementById("year-select").value);
+                        var sel2 = Number(document.getElementById("month-select").value); 
+                        var sel3 = document.getElementById("day-select");
+
+                        sel3.options[0].selected = true;
+
+                        if (sel2 == 2){
+                            if ((sel % 4 == 0 && sel % 100 != 0) || (sel %400 == 0)){
+                                days = 29;
+                            }else {
+                                days = 28;
+                            }
+                        }else if(sel2 == 4 || sel2 == 6 || sel2 == 9 || sel2 == 11) {
+                            days = 30;
+                        }else {
+                            days = 31;
+                        }
+
+                       
+                        if (days == 28) {
+                            sel3.remove(30);
+                            sel3.remove(29);
+                            sel3.remove(28);
+                        }
+
+                        if (days == 29){
+                            sel3.remove(30);
+                            sel3.remove(29);
+                            if(!sel3.options[28]){
+                                sel3.add(new Option("29","29"),null);
+                            }
+                        }
+                        
+                        if (days == 30){
+                            sel3.remove(30);
+                            if (!sel3.options[28]){
+                                sel3.add(new Option("29","29"),null);
+                            }
+                            if (!sel3.options[29]){
+                                sel3.add(new Option("30","30"),null);
+                            }
+                        }
+
+                        if (days == 31) {
+                            if (!sel3.options[28]){
+                                sel3.add(new Option("29","29"),null);
+                            }
+                            if (!sel3.options[29]){
+                                sel3.add(new Option("30","30"),null);
+                            }
+                            if (!sel3.options[30]){
+                                sel3.add(new Option("31","31"),null);
+                            }
+                        }
+                    }
+
+                    document.getElementById("day-select").onclick = function() {
+                        show();
+                    }
+
+                    document.getElementById("hour-select").onclick = function() {
+                        show();
+                    }
+                    
+                    document.getElementById("minute-select").onclick = function() {
+                        show();
+                    }
+
+                    document.getElementById("second-select").onclick = function() {
+                        show();
+                    }
+
+                    function createTime() {
+                        for (var i = 1; i <= 24; i++){
+                            var option = document.createElement("option");
+                            var text = document.createTextNode(checkTime(i));
+                            option.appendChild(text);
+                            document.getElementById("hour-select").appendChild(option); 
+                        }
+
+                        for (var i = 1; i <= 60; i++){
+                            var option = document.createElement("option");
+                            var text = document.createTextNode(checkTime(i));
+                            option.appendChild(text);
+                            document.getElementById("minute-select").appendChild(option); 
+                        }
+
+                        for (var i = 1; i <= 60; i++){
+                            var option = document.createElement("option");
+                            var text = document.createTextNode(checkTime(i));
+                            option.appendChild(text);
+                            document.getElementById("second-select").appendChild(option); 
+                        }
+                    }
+                    
+                    function checkTime(i) {
+                        if (i < 10) {
+                            return "0"+i;
+                        }else {
+                            return i;
+                        }
+                    }
+
+                    function weekDay(date) {
+                        var weekday=new Array(7);
+                        weekday[0]="Sunday";
+                        weekday[1]="Monday";
+                        weekday[2]="Tuesday";
+                        weekday[3]="Saturday";
+                        weekday[4]="Thursday";
+                        weekday[5]="Friday";
+                        weekday[6]="Saturday";
+
+                        var i = date.getDay();    
+                        return weekday[i]; 
+                    }
+
+                    function timeGap(ms1,ms2) {
+                        var gap;
+                        if (ms1 > ms2)  gap = ms1 - ms2;
+                        else    gap = ms2 - ms1;
+                        
+                        var day = Math.floor(gap/(1000*3600*24));
+                        var leave1 = gap % (24*3600*1000);
+                        var hour = Math.floor(leave1 / (1000*3600));
+                        var leave2 = leave1 % (3600*1000) ;
+                        var minute = Math.floor(leave2 / (60*1000));
+                        var leave3 = leave2 % (60*1000);
+                        var second = leave3 / 1000;
+                        if (ms1 - ms2 > 0){
+                            var gg = "还有"+ day +"天"+ hour +"小时"+ minute +"分"+ second +"秒";
+                        }
+                        else {
+                            var gg = "已经过去"+ day +"天"+ hour +"小时"+ minute +"分"+ second +"秒";
+                        }
+                        return gg;
+                    }
+
+                    function show() {
+                        var year = document.getElementById("year-select").value;
+                        var month = document.getElementById("month-select").value;
+                        var day = document.getElementById("day-select").value;
+                        var hour = document.getElementById("hour-select").value;
+                        var minute = document.getElementById("minute-select").value;
+                        var second = document.getElementById("second-select").value;
+                        var date = new Date(year +"-"+ month +"-"+ day);
+                        var weekday = weekDay(date);
+                        var date2 = new Date(year, month-1, day, hour, minute, second);    //0代表1月份，所以传入12其实是11月。
+                        var date_now = new Date();
+                        var ms1 = date2.getTime();
+                        var ms2 = date_now.getTime();
+                        var leap = timeGap(ms1,ms2);
+
+                        document.getElementById("result-wrapper").innerHTML  = "现在距离 " +year+ "年" +month+ "月" +day+ "日" + weekday +hour+ ":" +
+                        minute+ ":" +second+ leap;
+                    }    
+                    createDate();
+                    createTime();
+                    
+                </script>
+    </body>        

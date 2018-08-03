@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head><meta charset="utf-8"></head>
+    <body>
+        <script>
+            
+            var myDate = new Date();
+            var myYear = myDate.getFullYear();
+            var myMonth = myDate.getMonth();
+            var myDay = myDate.getDate();
+            var myHour = myDate.getHours();
+            var myMinute = myDate.getMinutes();
+            var mySecond = myDate.getSeconds();
+            
+            function checkTime() {
+                if (myMonth < 10)
+                    myMonth ="0" + myMonth;
+                if (myDay < 10)
+                    myDay = "0" + myDay;
+                if (myHour < 10)
+                    myHour = "0" + myHour;
+                if (myMinute < 10)
+                    myMinute = "0" + myMinute;
+                if (mySecond < 10)
+                    mySecond = "0" + mySecond;
+            }
+        
+            function weekDay() {
+                var weekday=new Array(7)
+                weekday[0]="Sunday";
+                weekday[1]="Monday";
+                weekday[2]="Tuesday";
+                weekday[3]="Saturday";
+                weekday[4]="Thursday";
+                weekday[5]="Friday";
+                weekday[6]="Saturday"; 
+                
+                return weekday[myDate.getDay()];
+            }
+
+            function amPm(){
+                if (myHour <=12)
+                    return "AM";
+                else
+                    return "PM";
+            }
+
+
+
+            function date() {
+                document.write(myYear+ "-" +myMonth+ "-" +myDay+ " ");    
+                document.write(weekDay());   
+                document.write(" " +myHour+ ":" + myMinute+ ":" +mySecond+ " "); 
+                document.write(amPm());
+            }
+            checkTime();
+            date();
+            
+        </script>
+    </body>
+</html>
